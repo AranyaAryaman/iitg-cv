@@ -1,0 +1,332 @@
+%Designed using Overleaf 
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.2cm, top=0.6cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=6ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Aranya Aryaman} % Your Name
+\newcommand{\course}{B.Tech: Computer Science and Engineering} % Your Course
+\newcommand{\roll}{170101011} % Your Roll No.
+\newcommand{\phone}{7896657541} % Your Phone Number
+\newcommand{\emaila}{aryamanaranya@gmail.com} %Email 1
+\newcommand{\emailb}{arany170101011@iitg.ac.in} %Email 2
+\newcommand{\github}{AranyaAryaman} %Github
+\newcommand{\website}{github.com/AranyaAryaman} %Website
+\newcommand{\linkedin}{aranya289} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+\vspace{-3mm}
+\includegraphics[width=2cm,clip]{iitg_logo.jpg}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone\\
+  {Roll No.: \roll} & \href{mailto:\emaila}{\emaila} \\
+  \course &  \href{https://github.com/\github}{github.com/AranyaAryaman}\\ 
+  {Indian Institute Of Technology, Guwahati}&
+    \href{https://www.linkedin.com/in/\linkedin/}{linkedin.com/in/\linkedin}
+\end{tabularx}
+}
+\vspace{-3mm}
+
+
+%-----------EDUCATION-----------------
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Indian Institute of Technology Guwahati}{Guwahati, India}
+%       {Bachelor of Technology in Mathematics and Computing ;  GPA: 8.10}{July. 2015 -- July. 2019 (Expected)}
+%     \resumeSubheading
+%       {Burdwan Model School}{Burdwan, W.B}
+%       {Central Board of Secondary Education (Class XII);  Percentage: 96.60}{March. 2015}
+%   \resumeSubHeadingListEnd\vspace{-3mm}
+\section{Education}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  B.Tech. & Indian Institute of Technology, Guwahati & 7.69 (Current) & 2017-Present\\
+  \hline
+  Senior Secondary & CBSE Board & 85.4\% & 2017 \\
+  \hline
+  Secondary & CBSE Board & 10.0 & 2015 \\
+  \hline
+\end{tabularx}}
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Qualcomm Inc.}{Hyderabad}
+      {Interim Engineering Intern}{May 2020 - Aug. 2020}
+      \vspace{2mm}
+      \resumeItemListStart
+    \item {Implemented Multi-Link Aggregation Feature in the WLAN Firmware for reducing the transmission latency.}
+    \item{Developed new Inter Thread Messaging procedures \& resolved issues with existing procedures in the Firmware.}
+    \resumeItemListEnd
+    \vspace{-4mm}
+    
+    % \resumeSubheading
+    %   {Company A}{Bengaluru, India}
+    %   {API Developer \& Machine Learning Intern}{May. 2018 - Jul. 2018}
+    %   \resumeItemListStart
+    % \item {XXXXXXXXXXXXXXX}
+    %     \item {YYYYYYYYYYYYYYYYYY}
+    % \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+  \vspace{-4mm}
+
+%-----------PROJECTS-----------------
+\section{Selected Projects}
+\resumeSubHeadingListStart
+    
+    \resumeProject
+      {Smart Door} %Project Name
+      {Prof. Shivshankar B. Nair, Professor, Dept. of CSE, IIT Guwahati} %Project Name, Location Name
+      {Sep. 2019 - Nov. 2019} %Event Dates
+      {\href{https://github.com/AranyaAryaman/Peripherals-Lab/tree/master/Smart_door_project}{\textit{git.io/JUuhh}}} %Website
+      \resumeItemListStart
+      \vspace{0.5mm}
+        \item {Developed an \textbf{IoT based} Solution to automate the process of  secure access to the internal premises.} 
+        \vspace{0.5mm}
+        \item{\textbf{Key Features} include Voice Recognition, Intruder Alert, Radio  Frequency Identification \& Validation of guests through a One Time Password using MQTT.}
+    \resumeItemListEnd
+        %\vspace{-1mm}
+     \resumeProject
+       {PintOS}
+       {Dr. Moumita Patra, Assistant Professor, Dept. of CSE, IIT Guwahati}{July 2019 - Nov. 2019}{\href{https://github.com/AranyaAryaman/pintos}{\textit{git.io/JUujY}}}
+       \resumeItemListStart
+       \vspace{0,5mm}
+     \item {Developed an \textbf{Operating System Framework} based on 80x86 Architecture. }
+     \vspace{0.5mm}
+     \item {\textbf{Key Features} include implementation of Kernel Threads, Loading \& Running of User Programs and addition of a Virtual Memory Implementation to the existing OS Framework.}
+    \resumeItemListEnd
+        %\vspace{-1mm}
+    \resumeProject
+      {Placement Portal} %Project Name
+      {Dr. Pradip Kumar Das, Professor, Dept. of CSE, IIT Guwahati} %Project Name, Location Name
+      {Mar. 2019 - Apr. 2019} %Event Dates
+      {\href{https://github.com/AranyaAryaman/Placement_Portal}{\textit{git.io/fj6ki}}} %Website
+      \resumeItemListStart
+      \vspace{0.5mm}
+        \item {Developed an \textbf{Android Application} providing a common ground for companies, students \& placement cell to interact.}
+        \item{\textbf{Key Features} include applying for jobs, filling preferences, uploading CVs, sending notices, booking interview slots and sending foreground \& pop-up notifications for real time updates. }
+    \resumeItemListEnd
+       % \vspace{-1mm}
+    \resumeProject
+      {Room Delivery System} %Project Name
+      {Dr. Samit Bhattacharya, Associate Professor, Dept. of CSE, IIT Guwahati } %Project Name, Location Name
+      {Apr. 2019} %Event Dates
+      {\href{https://github.com/AranyaAryaman/RoomDeliveryService}{\textit{git.io/fj6TT}}} %Website
+      \resumeItemListStart
+      \vspace{0.5mm}
+        \item {Developed a \textbf{web-based} Inventory Management \& Order-Delivery System using PHP \& MySQL that helps the department faculties to order snacks online. Provisioned a scheduler operating on FCFS basis.}
+    \resumeItemListEnd
+    \vspace{-1mm}
+    
+ 
+      
+  \resumeSubHeadingListEnd
+\vspace{-5mm}
+\section{Key courses taken}
+\resumeHeadingSkillStart
+\vspace{0.5mm}
+\resumeSubItem{Computer Science}
+ {Data Structures, Algorithms, Operating Systems, Software Engineering, Compilers, Machine Learning, Artificial Intelligence*, Deep Learning*, Speech Processing*}    \vspace{0.5mm}
+ \resumeSubItem{Mathematics} % Category
+    {Discrete Mathematics, Probability \& Random Processes, Optimization, Linear Algebra, Calculus. }
+    \hfill\textit{\footnotesize{* To be completed in Nov 2020}} \hspace{1mm}
+%  \resumeSubItem{Electrical and Electronics} % Category
+%     {Advanced Control Systems, Digital Systems, Microprocessors} % Skills
+ \resumeHeadingSkillEnd
+\vspace{-5mm}
+\section{Technical Skills}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Languages} % Category
+    {C, C++, Python, Java, VB, Octave, Verilog*}
+%  \resumeSubItem{Tools/Frameworks} % Category
+%     {Keras, Tensorflow, Pytorch*, ROS, OpenCV}
+ \resumeSubItem{Web Technologies}
+  {HTML, CSS*, PHP, Django*, MySQL, Firebase} 
+  \resumeSubItem{Miscellaneous}
+  {Git, \LaTeX, Shell, Machine Learning, Assembly Programming, Perforce, Android Programming.     }
+ \hfill\textit{\footnotesize{* Elementary proficiency}} \hspace{1mm}
+ \resumeHeadingSkillEnd
+
+\vspace{-5mm}
+\section{Achievements}
+\vspace{-0.2mm}
+\resumeSubHeadingListStart
+\resumePOR{AI IN INDIA '20} % Award
+    { - Secured 2nd position in the Inter Hostel AI Hackathon Event. } % Event
+    {} %Event Year
+\resumePOR{Codescape '19} % Award
+    { - Secured 2nd position in the Duo Coding Event of Annual Technical Fest of IIT Guwahati.} % Event
+    {} %Event Year
+\resumePOR{JEE Advanced '17} % Award
+    { - Secured AIR 570 among 0.16 million students appeared.} % Event
+    {} %Event Year
+\resumePOR{Kishore Vaigyanik Protsahan Yojna '17} % Award
+    { - Obtained the National Research Fellowship by securing AIR 176.} % Event
+    {} %Event Year
+\resumePOR{National Standard Examination in Physics '17} % Award
+    { - Placed in the National Top 1\% among 0.1 mn students.} % Event
+    {} %Event Year
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+\section{Positions of Responsibility}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Development Head} % Position
+    { Coding Club, IIT Guwahati} %Club,Event
+    {Apr 2019 - Apr 2020} %Tenure Period
+\resumePOR{General Secretary} % Position
+    { Siang Hostel, IIT Guwahati} %Club,Event
+    {Apr 2019 - May 2020} %Tenure Periods
+\resumePOR{Mentor} % Position
+    { Saathi Counselling Club, IIT Guwahati} %Club,Event
+    {July 2019 - Mar 2020} %Tenure Period
+
+\vspace{-5mm}
+\resumeSubHeadingListEnd
+\section{Extracurriculars}
+\resumeHeadingSkillStart
+\resumeSubItem{Kriti - Inter Hostel Technical Competition 2018}
+ {Ultimate Burnout (2nd), Electronics Hackathon}
+ \resumeSubItem{Manthan - Inter Hostel Cultural Competition 2017} % Category
+    {Ad-mad(4th)}
+%  \resumeSubItem{Electrical and Electronics} % Category
+%     {Advanced Control Systems, Digital Systems, Microprocessors} % Skills
+ \resumeHeadingSkillEnd
+\vspace{-4mm}
+
+
+%-------------------------------------------
+\end{document}
+
